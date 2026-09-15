@@ -1,0 +1,129 @@
+In the dynamic world of bikes, the BikeVibe is the trusted inspector, verifying the accuracy of each bike's model, type, status, and price. It ensures only compliant and reliable bikes make their way to the riders, fostering safety and trust. 
+Functional Requirements: 
+
+    
+        
+            
+                Req.#
+            
+            
+                Requirements Description  
+            
+            
+                 Type (Class)
+            
+            
+                Method Name
+            
+            
+                Parameters
+            
+            
+                Description
+            
+        
+        
+            
+                1
+            
+            
+                Include a four-argument constructor in Bike class.
+            
+            
+                 Bike
+            
+            
+                The getter-setter methods for all the attributes and no-argument constructor are provided as part of code skeleton
+            
+            
+                String bikeModel, String bikeType, String bikeStatus, int bikePrice
+            
+            
+                Include a public four-argument constructor in Bike class by following the order mentioned : bikeModel, bikeType, bikeStatus, and bikePrice
+            
+        
+        
+            
+                 2
+            
+            
+                 Include a one-argument constructor in InvalidBikeException class
+            
+            
+                 InvalidBikeException  
+            
+            
+                 -
+            
+            
+                String message
+            
+            
+                Include a public one argument constructor to set the message string to the super class.
+            
+        
+        
+            
+                3
+            
+            
+                Extract the details of the Bike, verify the details, and create an object for the Bike class.
+            
+            
+                 Bike
+            
+            
+                verifyBikeDetails  
+            
+            
+                String bikeDetails
+            
+            
+                This method is tasked with validating and parsing a string representing bike details. It splits the string into an array using the colon (:) delimiter. It then checks whether the details match the following patterns:
+                
+                
+                    bikeModel must match the pattern "BKE/" followed by exactly 4 digits.
+                    bikeType must be one of "Sport", "Cruiser", or "Electric".(Case-sensitive)
+                    bikeStatus must be either "New" or "Used".(Case-sensitive)
+                    bikePrice must be a greater than 0.
+                
+                
+                
+                
+                
+                If all validations pass, a Bike object is instantiated with the validated values and returned. Otherwise, an InvalidBikeException is thrown with the message "Invalid bike details"
+            
+        
+    
+
+ 
+You are provided with the main method in the UserInterface class as a code template, and it is excluded from evaluation.
+ Note:
+
+
+    Edit only the Bike and InvalidBikeException classes to implement the business requirements.
+    The methods and the constructor should be public, and the attributes of the class should be private.
+    In the Sample Input / Output provided, the highlighted text in bold corresponds to the input given by the user and the rest of the text represents the output.
+    Ensure that the names for classes, attributes, and methods are provided as specified in the question description.
+    Please do not use System.exit(0); to terminate the program.
+
+
+
+
+
+
+
+ Input Format:  <bikeModel>: <bikeType>: <bikeStatus>: <bikePrice>
+Sample Input / Output 1
+Enter the bike details
+BKE/1234:Sport:New:12000
+Bike Details:
+Bike Model: BKE/1234
+Bike Type: Sport
+Bike Status: New
+Bike Price: 12000  
+ 
+Sample Input / Output 2 
+Enter the bike details
+BKE/12345:Motorbike:used:15000
+Invalid bike details  
