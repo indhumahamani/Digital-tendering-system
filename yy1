@@ -1,0 +1,97 @@
+Description
+                    
+                    
+Cafe Brew, a smart coffee shop, wants to enhance its order management system. Your task is to develop a system that allows storing multiple coffee orders and provides the ability to filter orders based on a given coffee type and a minimum cup size.
+
+Functional Requirement:
+
+    
+        
+            
+                Req. #
+            
+            
+                 Type (Class)
+            
+            
+                Requirement Description  
+            
+            
+                Method Name
+            
+            
+                Parameters
+            
+            
+                Responsibilities
+            
+        
+        
+            
+                1
+            
+            
+                CoffeeOrder
+            
+            
+                Add the coffee order details to the coffeeOrderList.
+            
+            
+                addCoffeeOrder
+            
+            
+                String orderDetails
+            
+            
+                This method should add the orderDetails to the coffeeOrderList, which is implemented as an ArrayList.
+                
+                Constraints:
+                
+                
+                    orderDetails contains orderId, coffeeType and cupSize separated by a colon (:).
+                
+                
+                
+            
+        
+        
+            
+                2
+            
+            
+                CoffeeOrder
+            
+            
+                Filter the coffee orders based on coffee type and minimum cup size.
+            
+            
+                filterCoffeeOrders
+            
+            
+                String coffeeType, double minCupSize
+            
+            
+                
+                
+                
+                
+                This method accepts coffeeType and minCupSize as input parameters and filters coffee orders from the coffeeOrderList based on the specified coffeeType and minCupSize. If a coffeeType matches the given coffeeType and its cupSize is greater than or equal to the specified minCupSize, the orderId and cupSize are added to a new List and returned. Else return an empty list.Constraints: 
+                
+                
+                    The coffeeType is case-sensitive.The method returns a List of Strings representing the filtered orders in the format: "<orderId> - <cupSize> oz"
+                    Example: COF101 - 12 oz
+                
+            
+        
+    
+
+You are provided with the main method in the UserInterface class as code template, and it is excluded from evaluation.
+Note:
+
+
+    Edit only the CoffeeOrder class to implement the business requirements.
+    The methods should be public, and the attributes of the class should be private. 
+    In the Sample Input / Output provided, the highlighted text in bold corresponds to the input given by the user and the rest of the text represents the output.
+    Ensure that the names for classes, attributes, and methods are provided as specified in the question description.
+    Please do not use System.exit(0); to terminate the program.
+Sample Input and Output 1:Enter the number of coffee orders to add: 5Enter the coffee order details (Format: OrderID:CoffeeType:CupSize):ORD401:IrishCream:100ORD402:PumpkinSpice:250ORD403:IrishCream:150ORD404:PumpkinSpice:180ORD405:IrishCream:200Enter the coffee type to filter:IrishCreamEnter the minimum cup size (oz) to filter: 120Orders with IrishCream and cup size greater than or equal to 120.0 oz:ORD403 - 150.0 ozORD405 - 200.0 ozSample Input and Output 2:Enter the number of coffee orders to add: 3Enter the coffee order details (Format: OrderID:CoffeeType:CupSize):ORD201:ChocoFrappe:200ORD202:VanillaLatte:250ORD203:HazelnutMocha:150Enter the coffee type to filter:CaramelSwirlEnter the minimum cup size (oz) to filter: 100No coffee orders found matching the criteria.Sample Input and Output 3:Enter the number of coffee orders to add: 3Enter the coffee order details (Format: OrderID:CoffeeType:CupSize):ORD201:ChocoFrappe:200ORD202:VanillaLatte:250ORD203:HazelnutMocha:150Enter the coffee type to filter:ChocoFrappeEnter the minimum cup size (oz) to filter: 250No coffee orders found matching the criteria.Sample Input and Output 4:Enter the number of coffee orders to add: 2Enter the coffee order details (Format: OrderID:CoffeeType:CupSize):ORD201:ChocoFrappe:200ORD202:VanillaLatte:250Enter the coffee type to filter:ChocoFrappeEnter the minimum cup size (oz) to filter: 200Orders with ChocoFrappe and cup size greater than or equal to 200.0 oz:ORD201 - 200.0 oz
