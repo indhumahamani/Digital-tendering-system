@@ -1,0 +1,7 @@
+Predict the output. var arr = [];arr[2] = 3; for (let i = 0; i < arr.length; i++) {    console.log(arr[i]);    }Question 1 Select one:a. null null 3 
+b. undefined undefined 3 
+c. 3 
+d. Error 
+Clear my choiceQuestion 2
+Flag questionQuestion textBlank 1 Question 2 enablevisibilityvisible  property is used to specify the visibility of an element.Question 3
+Flag questionQuestion textAn area tag comes in association with <> tag. 
